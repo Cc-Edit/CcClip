@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body, #app {
+    @apply w-full h-full bg-gray-50 text-gray-800 tracking-wide select-none overflow-hidden;
+    @apply min-w-1256 min-h-600;
+    @apply dark:bg-gray-800 dark:text-gray-100;
+}
+::-webkit-scrollbar {/*滚动条整体样式*/
+    @apply w-1 h-1;
+}
+.trackList ::-webkit-scrollbar{
+    @apply w-2 h-2;
+}
+.trackList ::-webkit-scrollbar-thumb{
+    @apply bg-gray-400 rounded-xl;
+    @apply dark:bg-gray-500;
+}
+.trackList ::-webkit-scrollbar-track{
+    @apply bg-gray-50;
+    @apply dark:bg-gray-800;
+}
+::-webkit-scrollbar-corner{
+    @apply bg-gray-200;
+    @apply dark:bg-gray-900;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    @apply bg-gray-400 rounded-xl;
+    @apply dark:bg-gray-500;
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    @apply bg-gray-200;
+    @apply dark:bg-gray-900;
+}
+/* element style*/
+body .el-popper.is-dark {
+    background-color: #4B5563;
+}
+body .el-popper.is-dark .el-popper__arrow::before{
+    background-color: #4B5563;
+}
+body .el-slider{
+    --el-slider-button-size: 16px;
+    --el-slider-height: 4px;
+    --el-slider-main-bg-color: #818CF8;
+    --el-slider-runway-bg-color: #D1D5DB
+}
+body .el-slider__button{
+    border-width: 1px;
+    border-color: #afbfda;
+}
+body .el-switch{
+    --el-switch-on-color: #374151;
+    --el-switch-off-color: #E5E7EB;
+}
+
+body .el-tabs {
+    --el-text-color-primary: #E5E7EB;
+    --el-bg-color-overlay: #1F2937;
+    --el-border-color: #6B7280;
+
+}
+body .el-tabs--border-card{
+    --el-tabs-header-height: 32px;
+}
+body .el-popper.is-dark .el-popper__arrow::before{
+    background-color: #4B5563;
+}
+body .el-tabs__nav-wrap::after{
+    height: 1px;
+    --el-border-color-light: #4B5563
+}
+body .el-tabs__item.is-active{
+    @apply dark:text-gray-200 text-gray-600;
+}
+body .el-tabs__item{
+    @apply dark:text-gray-600 text-gray-400 pt-0 pb-0 pl-3 pr-3;
+}
+body .el-tabs__item:hover{
+    @apply dark:text-gray-200 text-gray-600;
+}
+body .el-tabs__content{
+    @apply absolute top-16 left-0 right-0 bottom-0 overflow-y-auto pb-4;
+}
+body .el-tabs--border-card .el-tabs__nav.is-top{
+    @apply flex flex-row w-full rounded-md;
+}
+body .el-tabs--border-card .el-tabs__item.is-top{
+    @apply flex-1 text-center dark:bg-gray-800 bg-gray-300 text-sm leading-8 hover:text-gray-100;
+}
+body .el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled):hover{
+    @apply bg-indigo-400 text-gray-100;
+}
+
+body .el-tabs--border-card .el-tabs__header .el-tabs__item.is-active{
+    @apply bg-indigo-400 text-gray-100;
+}
+body .el-tabs--border-card .el-tabs__content {
+    @apply pl-0 pr-0 pt-0 top-14;
+}
+body .el-collapse{
+    --el-collapse-border-color: #D1D5DB;
+    --el-collapse-header-height: 38px;
+    --el-collapse-header-bg-color: #D1D5DB;
+    --el-collapse-header-text-color: #1F2937;
+    --el-collapse-header-font-size: 14px;
+    --el-collapse-content-bg-color: #F9FAFB;
+    --el-collapse-content-font-size: 12px;
+    --el-collapse-content-text-color: #1F2937;
+    border-top: none;
+    border-bottom: none;
+}
+.dark body .el-collapse {
+    --el-collapse-border-color: #1F2937;
+    --el-collapse-header-height: 38px;
+    --el-collapse-header-bg-color: #374151;
+    --el-collapse-header-text-color: #E5E7EB;
+    --el-collapse-header-font-size: 14px;
+    --el-collapse-content-bg-color: #1F2937;
+    --el-collapse-content-font-size: 12px;
+    --el-collapse-content-text-color: #E5E7EB;
+    border-top: none;
+    border-bottom: none;
+}
+.dark body .el-input{
+    --el-input-bg-color:  #374151;
+    --el-text-color-regular: #E5E7EB;
+}
+.dark body .el-input-number{
+    --el-fill-color-light: #374151;
+    --el-text-color-regular: #E5E7EB;
+}
+.dark .el-textarea {
+    --el-input-bg-color: #374151;
+    --el-input-text-color: #E5E7EB;
+}
+.dark body .el-switch{
+    --el-switch-on-color: #374151;
+    --el-switch-off-color: #E5E7EB;
+}
+body .el-collapse-item__content{
+    @apply pl-0 pr-2 pb-2 pt-2;
+}
+body .el-collapse-item__header{
+    @apply pl-2 rounded;
+}
+body .el-radio-group{
+    @apply m-0;
+}
+body .formContent{
+    @apply flex flex-row;
+}
+body .el-input-number{
+    @apply w-full border-gray-500
+}
+
+body .el-input-number.is-controls-right .el-input__wrapper{
+    @apply pl-0 pr-6
+}
+body .el-input-number__increase, body .el-input-number__decrease{
+    @apply border-gray-500;
+}
+body .el-input-number.is-controls-right .el-input-number__decrease{
+    @apply border-gray-500;
+}
+body .el-input-number.is-controls-right .el-input-number__increase{
+    @apply border-gray-500;
+}
+body .el-popover{
+    --el-popover-bg-color: #374151;
+    --el-popover-font-size: 14;
+    --el-popover-border-color: #374151;
+    --el-popover-padding: 0px;
+}
+.el-loading-mask.is-fullscreen {
+    @apply bg-gray-800 bg-opacity-80;
+}
+body .el-loading-spinner .el-loading-text{
+    @apply text-yellow-300 text-sm mt-3;
+}
+body .el-loading-spinner .path{
+    stroke: #FCD34D;
+    stroke-width: 4;
+}
