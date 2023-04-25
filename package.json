@@ -1,7 +1,7 @@
 {
-  "name": "cceditor",
+  "name": "CcClip",
   "version": "0.0.0",
-  "license": "Private",
+  "license": "Apache 2.0",
   "private": true,
   "scripts": {
     "dev": "vite",
