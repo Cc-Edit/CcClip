@@ -3,6 +3,15 @@
 | ![wechat.png](public%2Fuser%2Fwechat.png) | ![img.png](public%2Fuser%2Fimg.png) |
 
 # CcClip
+
+<p align="center">
+  <h2 align="center">Sponsor</h2>
+</p>
+
+<p align="left">
+  <img alt="就是你个城" src="https://github.com/Cc-Edit/CcClip/blob/master/public/user/sponsor/jsngc.png" width="200">
+</p>
+
 ## 简介
   > Vue 3 + FFmpeg 实现纯前端音视频编辑 <br/>
   > 如果有用请 Star 支持一下哟 <br/>
@@ -11,13 +20,13 @@
 ## 特性
 - 💪 Vue 3、Vue-Router 4、Vite、pnpm、esbuild、TypeScript
 - ☀️ Pinia 状态管理
-- 🌟 [完整的Eslint配置](https://github.com/Cc-Edit/CcClip/blob/main/.eslintrc.cjs)
+- 🌟 [完整的Eslint配置](https://github.com/Cc-Edit/CcClip/blob/master/.eslintrc.cjs)
 - 🌪 Tailwind 原子css集成
 - 💥 ffmpeg、wasm 底层音视频处理集成
-- 🚙 [文件路由自动注册](https://github.com/Cc-Edit/CcClip/blob/main/src/plugins/installRouter.ts)
-- 🚕 [Icon组件自动导入](https://github.com/Cc-Edit/CcClip/blob/main/src/plugins/installIcon.ts)
+- 🚙 [文件路由自动注册](https://github.com/Cc-Edit/CcClip/blob/master/src/plugins/installRouter.ts)
+- 🚕 [Icon组件自动导入](https://github.com/Cc-Edit/CcClip/blob/master/src/plugins/installIcon.ts)
 - 🚗 [API自动注册 + vue-hooks-plus 简化API调用维护](https://inhiblab-core.gitee.io/docs/hooks/)
-- 🎁 [提供一个基于Vite的本地接口服务，用来提供一些简单的Mock接口](https://github.com/Cc-Edit/CcClip/blob/main/viteUtil/viteProxyServer/vite-plugin-proxy-server.ts)
+- 🎁 [提供一个基于Vite的本地接口服务，用来提供一些简单的Mock接口](https://github.com/Cc-Edit/CcClip/blob/master/viteUtil/viteProxyServer/vite-plugin-proxy-server.ts)
 - 🌓 暗色主题切换
 
 ## 功能
@@ -70,5 +79,6 @@ npm run lint-fix
 ## 版权相关
   开源前已对项目进行版权过滤，将个人使用范围的素材替换为公共免费的素材。
   - icon svg 部分来自 [iconpark](https://iconpark.oceanengine.com/official)
+
 
 如需帮助请联系： ccedit@126.com
