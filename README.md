@@ -1,6 +1,6 @@
 |                                     WeChat🍻                                      |                                                打赏 :confetti_ball:                                                 | 
 |:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:| 
-| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/wechat.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
+| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/WeChatGroup.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
 
 # CcClip
 
