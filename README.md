@@ -9,7 +9,7 @@
 </p>
 
 <p align="left">
-  <img alt="就是你个城" src="https://github.com/Cc-Edit/CcClip/blob/master/public/user/sponsor/jsngc.png" width="200">
+  <img alt="就是你个城" src="https://github.com/Cc-Edit/CcClip/blob/master/public/user/sponsor/jsngc.png" width="60" style="border-radius: 12px; border: 1px solid #d8dee4;">
 </p>
 
 ## 简介
