@@ -1,6 +1,6 @@
-|                                     WeChat                                      |                                                打赏 :confetti_ball:                                                 | 
+|                                     WeChat🍻                                      |                                                打赏 :confetti_ball:                                                 | 
 |:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:| 
-| ![wechat.png](public%2Fuser%2Fwechat.png) | ![img.png](public%2Fuser%2Fimg.png) |
+| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/wechat.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
 
 # CcClip
 
@@ -9,7 +9,7 @@
 </p>
 
 <p align="left">
-  <img alt="就是你个城" src="https://github.com/Cc-Edit/CcClip/blob/master/public/user/sponsor/jsngc.png" width="60" style="border-radius: 12px; border: 1px solid #d8dee4;">
+  <img alt="就是你个城" src="https://github.com/Cc-Edit/Cc-Edit/blob/main/src/sponsor/jsngc.png" width="60" style="border-radius: 12px; border: 1px solid #d8dee4;">
 </p>
 
 ## 简介
