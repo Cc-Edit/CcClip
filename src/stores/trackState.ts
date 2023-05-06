@@ -2,6 +2,7 @@ import { ref, watchEffect, reactive, computed } from 'vue';
 import { defineStore } from 'pinia';
 import { checkTrackListOverlap } from '@/utils/storeUtil';
 import { useTrackAttrState } from '@/stores/trackAttribute';
+import { getJsonParse } from '@/utils/common';
 
 export type TrackType = 'video' | 'audio' | 'text' | 'image' | 'effect' | 'transition' | 'filter';
 interface BaseTractItem {
@@ -83,7 +84,7 @@ export const useTrackState = defineStore('trackState', () => {
   });
   // 轨道放大比例
   const trackScale = ref(parseInt(localStorage.trackS || '60'));
-  const trackList = reactive<TrackLineItem[]>(localStorage.trackList ? JSON.parse(localStorage.trackList) : []);
+  const trackList = reactive<TrackLineItem[]>(localStorage.trackList ? getJsonParse(localStorage.trackList) : []);
 
   // 选中元素坐标
   const selectTrackItem = reactive({

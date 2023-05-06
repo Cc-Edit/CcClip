@@ -72,7 +72,7 @@
   import { usePlayerState } from '@/stores/playerState';
   import type { VideoTractItem } from '@/stores/trackState';
   import { debounce } from 'lodash-es';
-  import { formatTime, isVideo } from '@/utils/common';
+  import { formatTime, isVideo, getJsonParse } from '@/utils/common';
   const store = useTrackState();
   const playerStore = usePlayerState();
   const trackList = ref();
@@ -183,7 +183,7 @@
     setDropLineLeft(event);
   }
   function addTrack(event: DragEvent) {
-    let dragInfo = JSON.parse(store.dragData.dataInfo || '');
+    let dragInfo = getJsonParse(store.dragData.dataInfo);
     if (dragInfo) {
       const startFrame = getSelectFrame(dropItemLeft.value, trackScale.value, defaultFps.value);
       store.addTrack(formatTrackItemData(dragInfo, startFrame > 0 ? startFrame - 1 : 0), dropLineIndex.value, insertBefore.value, startFrame - 1);

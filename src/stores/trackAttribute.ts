@@ -1,8 +1,9 @@
 import { reactive, watchEffect } from 'vue';
 import { defineStore } from 'pinia';
+import { getJsonParse } from '@/utils/common';
 
 export const useTrackAttrState = defineStore('trackAttrState', () => {
-    const trackAttrMap = reactive(localStorage.trackAttr ? JSON.parse(localStorage.trackAttr) : {});
+    const trackAttrMap = reactive(localStorage.trackAttr ? getJsonParse(localStorage.trackAttr) : {});
 
     function initTrackAttr(id: string) {
         if (!trackAttrMap[id]) trackAttrMap[id] = {};
