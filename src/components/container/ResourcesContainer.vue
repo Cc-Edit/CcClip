@@ -3,11 +3,11 @@
     <MenuList :activeIndex="defaultActiveIndex" @activeChange="activeHandler" />
     <ItemList
       :activeKey="state.activeItem.key"
-      :defaultCollapse="store.showSubMenu"
+      :defaultCollapse="store.hideSubMenu"
       :title="state.activeItem.title"
       @collapseChange="changeCollapse"
     />
-    <div class="absolute top-1/2 left-8" v-show="store.showSubMenu">
+    <div class="absolute top-1/2 left-8" v-show="store.hideSubMenu">
       <ElIcon :size="16" class="cursor-pointer p-2 box-content" @click="switchCollapse">
         <Expand />
       </ElIcon>
@@ -32,12 +32,12 @@
   }
   function switchCollapse() {
     nextTick(() => {
-      store.showSubMenu = !store.showSubMenu;
+      store.hideSubMenu = !store.hideSubMenu;
     });
   }
   function changeCollapse(newCollpase: boolean) {
     nextTick(() => {
-      store.showSubMenu = newCollpase;
+      store.hideSubMenu = newCollpase;
     });
   }
 </script>

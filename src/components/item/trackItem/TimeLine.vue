@@ -48,7 +48,7 @@
   const canvasContainer = ref();
   const timeLine = ref();
   let canvasContext = {} as CanvasRenderingContext2D;
-  const { isDark, showSubMenu } = toRefs(usePageState());
+  const { isDark, hideSubMenu } = toRefs(usePageState());
   const canvasConfigs = computed(() => ({
     bgColor: isDark.value ? '#374151' : '#E5E7EB', // 背景颜色
     ratio: window.devicePixelRatio || 1, // 设备像素比
@@ -107,7 +107,7 @@
   });
   watch(canvasConfigs, updateTimeLine);
   watch(props, updateTimeLine);
-  watch(showSubMenu, () => {
+  watch(hideSubMenu, () => {
     setTimeout(() => {
       setCanvasRect();
     }, 300);
