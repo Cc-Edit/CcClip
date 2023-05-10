@@ -1,4 +1,4 @@
-|                                     WeChat🍻                                      |                                                打赏 :confetti_ball:                                                 | 
+|                                     学习讨论小组🍻                                      |                                                打赏 :confetti_ball:                                                 | 
 |:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:| 
 | ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/WeChatGroup.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
 
