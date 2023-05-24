@@ -68,6 +68,32 @@ npm run lint
 npm run lint-fix
 ```
 
+## 常用命令
+### 1. 获取视频时长信息、总帧数信息：
+```shell
+$ ffmpeg -hide_banner -i video_1.mp4  -f null -
+
+# 输出：
+# frame=  710 fps=0.0 q=-0.0 Lsize=N/A time=00:00:23.75 bitrate=N/A speed= 168x
+# video:327kB audio:2046kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+# frame 为当前视频文件总帧数
+# time 为视频时长
+# 注意一点，总帧数取决于视频fps，总帧数 = fps * 总时长
+```
+> ⚠️ 还有一点  
+> 之前考虑将 ffprobe 也接入进来，可以直接获取视频的媒体信息，但这么做的结果是前端资源体积过于大  
+> 所以 ffmpeg 将 ffprobe 抽离出去的原因也许就是为了保留一个最小可用集合  
+> 综上，如果确实有需要获取资源详细信息的场景，我的建议是放到后台或者是单独页面处理   
+> 在编辑页面只做结果的处理。  
+
+> 建议的方案：  
+> 服务器环境中安装完整的ffmpeg  
+> 将获取视频媒体信息的命令封装为接口 
+> 在文件上传后在服务器本地获取视频媒体信息，并保存 
+> 不论是用户上传，还是管理后台上传，都是在上传完成后获取文件信息。 
+> 只有文件信息获取完成后，资源才可以在编辑器中使用 
+
+
 ## 版权相关
   开源前已对项目进行版权过滤，将个人使用范围的素材替换为公共免费的素材。
   - icon svg 部分来自 [iconpark](https://iconpark.oceanengine.com/official)
