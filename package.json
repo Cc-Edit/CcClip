@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "Apache 2.0",
   "private": true,
+  "homepage": "https://github.com/Cc-Edit/CcClip",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
