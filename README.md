@@ -49,25 +49,6 @@ pnpm install
 npm run dev
 ```
 
-### 生产构建
-
-```sh
-npm run build
-```
-
-
-### 代码检查
-
-```sh
-npm run lint
-```
-
-### 代码检查与修复
-
-```sh
-npm run lint-fix
-```
-
 ## 常用命令
 ### 1. 获取视频时长信息、总帧数信息：
 ```shell

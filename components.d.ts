@@ -40,6 +40,7 @@ declare module '@vue/runtime-core' {
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     EmptyAttrIcon: typeof import('./src/components/icons/EmptyAttrIcon.vue')['default']
+    Export: typeof import('./src/components/Export.vue')['default']
     FilterIcon: typeof import('./src/components/icons/FilterIcon.vue')['default']
     FilterItem: typeof import('./src/components/item/trackItem/template/FilterItem.vue')['default']
     FormItem: typeof import('./src/components/item/formItem/FormItem.vue')['default']

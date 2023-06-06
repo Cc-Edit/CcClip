@@ -10,12 +10,7 @@
       {{ store.pageTitle }}
     </h2>
     <div class="flex w-1/3 flex-row-reverse pr-10 items-center">
-      <ElButton color="#626aef" disabled>
-        <ElIcon :size="size" :color="color" class="mr-1">
-          <Download />
-        </ElIcon>
-        导出
-      </ElButton>
+      <Export />
       <el-switch
         class="mr-10"
         size="large"
@@ -30,13 +25,12 @@
 </template>
 
 <script setup lang="ts">
+  import Export from '@/components/Export.vue';
   import logoImage from '@/assets/ccLogo.png';
   import { ref, computed } from 'vue';
   import { Download, Sunny, Moon } from '@element-plus/icons-vue';
   import { usePageState } from '@/stores/pageState';
   const store = usePageState();
-  const size = ref(14);
-  const color = '#fff';
   const inner = ref(true);
   const switchClass = computed(() => ({
     '--el-switch-border-color': store.isDark ? '#4B5563' : '#D1D5DB',
