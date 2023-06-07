@@ -11,12 +11,13 @@ import Icons from 'unplugin-icons/vite';
 import vue from '@vitejs/plugin-vue';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
+const OpenSSl = (process.env?.npm_lifecycle_event === 'dev-ssl');
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    host: true,
-    https: {
+    host: OpenSSl,
+    https: OpenSSl && {
       key: fs.readFileSync('viteUtil/cert/key.pem'),
       cert: fs.readFileSync('viteUtil/cert/cert.pem')
     },

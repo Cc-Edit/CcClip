@@ -6,6 +6,7 @@
   "homepage": "https://github.com/Cc-Edit/CcClip",
   "scripts": {
     "dev": "vite",
+    "dev-ssl": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",

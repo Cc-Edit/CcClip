@@ -68,7 +68,7 @@ npm run lint
 npm run lint-fix
 ```
 
-## 常用命令
+## 常见问题
 ### 1. 获取视频时长信息、总帧数信息：
 ```shell
 $ ffmpeg -hide_banner -i video_1.mp4  -f null -
@@ -92,6 +92,11 @@ $ ffmpeg -hide_banner -i video_1.mp4  -f null -
 > 在文件上传后在服务器本地获取视频媒体信息，并保存     
 > 不论是用户上传，还是管理后台上传，都是在上传完成后获取文件信息。   
 > 只有文件信息获取完成后，资源才可以在编辑器中使用   
+
+### 2. 如何使用 ip 地址访问
+> 受 COOP 的限制，使用 ip 地址访问时依然不被信任，所以我们增加了 dev-ssl 命令  
+> 执行 pnpm dev-ssl 即可通过 ip 地址访问  
+> 注意 ⚠️ 使用 dev-ssl 启动之后访问地址更换为 https 开头  
 
 ## V 2.0 进行中...
 - [ ] (视频合成导出)
