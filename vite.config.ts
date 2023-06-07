@@ -8,12 +8,21 @@ import { VueHooksPlusResolver } from '@vue-hooks-plus/resolvers';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import IconsResolver from 'unplugin-icons/resolver';
 import Icons from 'unplugin-icons/vite';
-
+import basicSsl from '@vitejs/plugin-basic-ssl';
 import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: true,
+    https: true,
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp'
+    }
+  },
   plugins: [
+    basicSsl(),
     vue(),
     AutoImport({
       imports: ['vue'],

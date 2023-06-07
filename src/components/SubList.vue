@@ -9,7 +9,7 @@
         :key="`${item.name}${item.cover}${idnex}`"
       >
         <template v-if="isAudio">
-          <AudioItem :data="item" :type="type" />
+          <AudioResourceItem :data="item" :type="type" />
         </template>
         <template v-else>
           <OtherResource :data="item" :type="type" />
@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
   import { ref, computed } from 'vue';
-  import AudioItem from '@/components/item/resourcesItem/AudioItem.vue';
+  import AudioResourceItem from '@/components/item/resourcesItem/AudioResourceItem.vue';
   import OtherResource from '@/components/item/resourcesItem/OtherResource.vue';
   const props = defineProps({
     listData: {
