@@ -8,11 +8,23 @@ import { VueHooksPlusResolver } from '@vue-hooks-plus/resolvers';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import IconsResolver from 'unplugin-icons/resolver';
 import Icons from 'unplugin-icons/vite';
-
 import vue from '@vitejs/plugin-vue';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const fs = require('fs');
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: true,
+    https: {
+      key: fs.readFileSync('viteUtil/cert/key.pem'),
+      cert: fs.readFileSync('viteUtil/cert/cert.pem')
+    },
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp'
+    }
+  },
   plugins: [
     vue(),
     AutoImport({
