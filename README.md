@@ -1,6 +1,7 @@
-|    学习讨论小组🍻    |           打赏（赠送学习资料：[webNote](https://github.com/Cc-Edit/webNote)） :confetti_ball:     | 
-|:-------------------------------------------------------------------------------:|:--------------------------------------------------------------------:| 
-| ![wechat.png](https://static.sisjs.com/images/WeChatGroup.png?v=4)  | ![img.png](https://static.sisjs.com/images/img.png) |
+|                                      学习讨论小组🍻                                      |   打赏（赠送学习资料：[webNote](https://github.com/Cc-Edit/webNote)） :confetti_ball:    | 
+|:----------------------------------------------------------------------------------:|:---------------------------------------------------------------------:| 
+| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/public/WeChatGroup.png) |     ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/public/img.png)  |
+
 
 # CcClip
 
