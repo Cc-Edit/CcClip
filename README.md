@@ -33,40 +33,12 @@ Vue 3 + FFmpeg 实现纯前端音视频编辑 <br/>
   - gif抽帧、视频抽帧、视频裁切、音视频分离、文件下载
   - 音频裁切、多音频合成、音频波形 
 
-## 参考
-- https://trac.ffmpeg.org/wiki/Waveform  
-- https://github.com/chuxiaoguo/vue-sketch-ruler 时间轴参考此工具库实现
-- 
-## 脚本说明
-
-```sh
-pnpm install
-```
-
-### 本地开发
-
-```sh
-npm run dev
-```
-
-### 生产构建
-
-```sh
-npm run build
-```
-
-
-### 代码检查
-
-```sh
-npm run lint
-```
-
-### 代码检查与修复
-
-```sh
-npm run lint-fix
-```
+## 预览
+![](coverImage/img.png)
+![](coverImage/img_1.png)
+![](coverImage/img_2.png)
+![](coverImage/img_3.png)
+![](coverImage/img_4.png)
 
 ## 常见问题
 ### 1. 获取视频时长信息、总帧数信息：
@@ -103,6 +75,12 @@ $ ffmpeg -hide_banner -i video_1.mp4  -f null -
 - [ ] (转场)
 - [ ] (滤镜)
 - [ ] (特效)
+
+
+## 参考
+- https://trac.ffmpeg.org/wiki/Waveform
+- https://github.com/chuxiaoguo/vue-sketch-ruler 时间轴参考此工具库实现
+
 
 ## 版权相关
   开源前已对项目进行版权过滤，将个人使用范围的素材替换为公共免费的素材。
