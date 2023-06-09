@@ -8,7 +8,6 @@
 ## 简介
 Vue 3 + FFmpeg 实现纯前端音视频编辑 <br/>
 如果有用请 🌟 Star 🌟 支持一下哟 🫣 <br/>
-预览 https://www.bilibili.com/video/BV1YT411Y7YJ/
 
 ## 特性
 - 💪 Vue 3、Vue-Router 4、Vite、pnpm、esbuild、TypeScript
