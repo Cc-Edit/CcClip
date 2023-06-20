@@ -44,7 +44,7 @@ export const Options = {
                                                 },
                                                 placeholder: '请输入内容'
                                             }, name: '内容', mappingKey: 'text', defaultValue: '默认文本' }),
-                                        mappingFormItem('Color', { name: '颜色', mappingKey: 'color', defaultValue: '#fff' })
+                                        mappingFormItem('Color', { name: '颜色', mappingKey: 'color', defaultValue: { r: 227, g: 233, b: 233, a: 1 }})
                                     ]
                                 })
                             ]

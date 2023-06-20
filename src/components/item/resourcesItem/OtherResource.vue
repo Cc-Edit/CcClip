@@ -1,6 +1,6 @@
 <template>
   <div
-    class="inline-block relative"
+    class="inline-block relative w-22"
     draggable="true"
     @dragstart="dragStart"
   >
