@@ -29,7 +29,8 @@ function ViteProxyServer(): Plugin {
       const files = glob.sync('viteUtil/viteProxyServer/servers/**/*.js');
       console.log('****注册接口****');
       files.map((filePath: string) => {
-        const urlPath = (filePath.match(/(?<=servers).*(?=\.js)/) || [])[0];
+        let urlPath = (filePath.match(/(?<=servers).*(?=\.js)/) || [])[0];
+        urlPath = urlPath.replace(/[\\/]+/g, '/');
         vm.runInContext(fs.readFileSync(filePath, 'utf-8'), context)
         console.log('****注册接口: ' + urlPath);
         server.middlewares.use(urlPath, context.handler);
