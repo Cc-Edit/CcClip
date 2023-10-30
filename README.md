@@ -96,7 +96,7 @@ $ ffmpeg -hide_banner -i video_1.mp4  -f null -
 - [ ] (滤镜)
 - [ ] (特效)
 > 暂时还在忙别的项目，抽不出时间迭代 2.0   
-> 暂定 Star 数到 500 后开始 2.0 开发
+> 暂定 Star 数到 500 后开始 2.0 开发   -  delay...
 
 ## 参考
 - https://trac.ffmpeg.org/wiki/Waveform
