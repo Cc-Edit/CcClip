@@ -90,13 +90,11 @@ $ ffmpeg -hide_banner -i video_1.mp4  -f null -
 > 参考：https://gl-transitions.com/   
 
 
-## V 2.0 进行中...
+## V 2.0 开发中...... ( ⭐️ Star 加速！)
 - [ ] (视频合成导出)
 - [ ] (转场)
 - [ ] (滤镜)
 - [ ] (特效)
-> 暂时还在忙别的项目，抽不出时间迭代 2.0   
-> 2.0 开发中...... ( ⭐️ Star 加速！)
 
 ## 参考
 - https://trac.ffmpeg.org/wiki/Waveform
