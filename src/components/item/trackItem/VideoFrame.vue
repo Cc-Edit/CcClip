@@ -74,7 +74,7 @@
       let overFrame = Math.floor(frameCount - 1 - renderSpace * frameStep); // 不能整除时溢出帧数
       let offset = Math.max(containerWidth - Math.floor(maxFrame * width), 0); // 不够撑满canvas宽度的情况
       let marginSpace = Math.max(Math.round((offset / frameStep)), 0); // 帧数不够填满容器时的间距
-      let frameIndex = props.trackItem.offsetL + 1; // 开始下标
+      let frameIndex = props.trackItem.offsetL + 1 + props.trackItem.startIndex; // 开始下标
       for (let i = 0; i < maxFrame; i++) {
         const blobFrame = ffmpeg.getFrame(props.trackItem.name, frameIndex);
         ((index, margin) => {

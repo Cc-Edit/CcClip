@@ -1,6 +1,8 @@
 <template>
   <div class="pl-4 pb-1 pr-10 w-full h-10 border-b dark:border-gray-600 border-gray-300">
-    <div class="float-left h-9 w-32 flex flex-row flex-nowrap items-center justify-around">
+    <div
+      class="float-left h-9 w-32 flex flex-row flex-nowrap items-center justify-around"
+    >
       <div v-for="item of icons" :key="item.title" @click="handlerIcon(item)">
         <el-tooltip
           :disabled="item.disable"
@@ -10,9 +12,9 @@
           placement="bottom-start"
         >
           <component
-              :is="item.icon"
-              class="focus:outline-0"
-              :class="item.disable ? 'cursor-not-allowed text-gray-400' : ''"
+            :is="item.icon"
+            class="focus:outline-0"
+            :class="item.disable ? 'cursor-not-allowed text-gray-400' : ''"
           />
         </el-tooltip>
       </div>
@@ -28,6 +30,8 @@
 <script setup lang="ts">
   import { usePageState } from '@/stores/pageState';
   import { useTrackState } from '@/stores/trackState';
+  import { usePlayerState } from '@/stores/playerState';
+  import { getId } from '@/utils/common';
   import { ref, reactive, computed } from 'vue';
   const props = defineProps({
     modelValue: {
@@ -50,6 +54,7 @@
   });
   const store = usePageState();
   const trackStore = useTrackState();
+  const playerStore = usePlayerState();
   const statePoint = computed(() => store._stepInfo.statePoint);
   const stateLength = computed(() => store._stepInfo.stateLength);
   const svgStyle = ref({
@@ -83,12 +88,14 @@
     },
     {
       title: '分割',
-      disable: true,
+      disable:
+        trackStore.selectTrackItem.line === -1 && trackStore.selectTrackItem.index === -1,
       icon: 'SplitIcon'
     },
     {
       title: '删除',
-      disable: trackStore.selectTrackItem.line === -1 && trackStore.selectTrackItem.index === -1,
+      disable:
+        trackStore.selectTrackItem.line === -1 && trackStore.selectTrackItem.index === -1,
       icon: 'DeleteIcon'
     }
   ]);
@@ -99,15 +106,32 @@
       return;
     }
     if (type === 'DeleteIcon') {
-      if (trackStore.selectTrackItem.line !== -1 && trackStore.selectTrackItem.index !== -1) {
-        trackStore.removeTrack(trackStore.selectTrackItem.line, trackStore.selectTrackItem.index);
-        trackStore.selectTrackItem.line = -1;
-        trackStore.selectTrackItem.index = -1;
-      }
+      trackStore.removeTrack(
+        trackStore.selectTrackItem.line,
+        trackStore.selectTrackItem.index
+      );
+      trackStore.selectTrackItem.line = -1;
+      trackStore.selectTrackItem.index = -1;
     } else if (type === 'UndoIcon') {
       store._undo();
     } else if (type === 'RedoIcon') {
       store._redo();
+    } else if (type === 'SplitIcon') {
+      // 判断分割时间是否在视频内
+      let splitTime = playerStore.playStartFrame;
+      let active
+        = trackStore.trackList[trackStore.selectTrackItem.line].list[
+          trackStore.selectTrackItem.index
+        ];
+      if (splitTime > active.start && splitTime < active.end && active.type === 'video') {
+        let copy = JSON.parse(JSON.stringify(active));
+        copy.end = active.end;
+        active.end = splitTime;
+        copy.start = splitTime + 1;
+        copy.id = getId();
+        copy.startIndex = active.end;
+        trackStore.addTrack(copy, trackStore.selectTrackItem.line, false, 0);
+      }
     }
   }
 </script>

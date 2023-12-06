@@ -119,11 +119,11 @@ export class CanvasPlayer {
     drawToRenderCanvas(trackItem: Record<string, any>, id: number, frameIndex: number) {
         return new Promise(resolve => {
             const { sourceWidth, sourceHeight, drawL, drawT, drawW, drawH } = this.computedRect(trackItem, id);
-            const { type, start, end, offsetL, name, sourceFrame } = trackItem;
+            const { type, start, end, offsetL, name, sourceFrame, startIndex } = trackItem;
             if (frameIndex > end) {
                 resolve(true);
             } else if (isVideo(type)) {
-                const frame = Math.max(frameIndex - start + offsetL, 1); // 默认展示首帧
+                const frame = Math.max(frameIndex - start + offsetL + startIndex, 1); // 默认展示首帧
                 const blobFrame = this.ffmpeg.getFrame(name, frame);
                 createImageBitmap(blobFrame as Blob).then(imageBitmap => {
                     this.renderContext?.drawImage(imageBitmap, 0, 0, sourceWidth, sourceHeight, drawL, drawT, drawW, drawH);

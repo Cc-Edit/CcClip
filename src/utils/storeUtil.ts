@@ -7,7 +7,7 @@ import { getId } from '@/utils/common';
  * @param startFrame 当前播放指针位置
  * */
 export function formatTrackItemData(itemData: Record<string, any>, startFrame: number): TrackItem {
-    let { time = 2000, type, frameCount, offsetL = 0, offsetR = 0, start = 0, end = 0, id = getId() } = itemData;
+    let { time = 2000, type, frameCount, offsetL = 0, offsetR = 0, start = 0, end = 0, id = getId(), startIndex = 0 } = itemData;
     if (type === 'video') {
         time = frameCount ? parseInt(`${frameCount / baseFps * 1000}`) : time;
     } else {
@@ -24,7 +24,8 @@ export function formatTrackItemData(itemData: Record<string, any>, startFrame: n
         offsetL,
         offsetR,
         time,
-        frameCount
+        frameCount,
+        startIndex
     };
     return trackItemData as TrackItem;
 }

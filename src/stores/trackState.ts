@@ -14,6 +14,7 @@ interface BaseTractItem {
   frameCount: number,
   offsetL: number, // 音视频左侧裁切
   offsetR: number, // 音视频右侧裁切
+  startIndex: number // 裁切后初始位置
 }
 export interface VideoTractItem extends BaseTractItem{
   time: number,
@@ -22,7 +23,7 @@ export interface VideoTractItem extends BaseTractItem{
   cover: string,
   width: number,
   height: number,
-  fps: number
+  fps: number,
 }
 
 export interface AudioTractItem extends BaseTractItem{
@@ -159,7 +160,6 @@ export const useTrackState = defineStore('trackState', () => {
     selectTrackItem.index = 0;
   }
   function selectTrackById(id: string) {
-    console.log(id);
     trackList.forEach((item, index) => {
         item.list.forEach((trackItem, trackIndex) => {
           if (trackItem.id === id) {
