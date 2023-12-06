@@ -96,6 +96,10 @@ $ ffmpeg -hide_banner -i video_1.mp4  -f null -
 - [ ] (滤镜)
 - [ ] (特效)
 
+## 贡献
+- [视频裁剪需求](https://github.com/Cc-Edit/CcClip/pull/7)：[@luotingv1](https://github.com/luotingv1)  
+
+
 ## 参考
 - https://trac.ffmpeg.org/wiki/Waveform
 - https://github.com/chuxiaoguo/vue-sketch-ruler 时间轴参考此工具库实现
