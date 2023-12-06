@@ -159,7 +159,6 @@ export const useTrackState = defineStore('trackState', () => {
     selectTrackItem.index = 0;
   }
   function selectTrackById(id: string) {
-    console.log(id);
     trackList.forEach((item, index) => {
         item.list.forEach((trackItem, trackIndex) => {
           if (trackItem.id === id) {
