@@ -10,6 +10,8 @@ import installRouter from '@/plugins/installRouter'; // 路由注册
 import installPiniaPlugin from '@/plugins/installPiniaPlugin'; // Pinia 状态监控
 import installFFmpeg from '@/plugins/installFFmpeg'; // ffmpeg 集成
 
+window.global ||= window;
+
 const app = createApp(App);
 app.config.globalProperties.$showLoading = ref(false);
 app.config.globalProperties.$ElLoading = ElLoading.service({
